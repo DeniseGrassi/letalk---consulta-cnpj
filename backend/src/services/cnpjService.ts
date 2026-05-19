@@ -51,7 +51,7 @@ export async function enrichLeadWithCnpjData(lead: LeadInput) {
     analysis: {
       priority: leadPriority.priority,
       reasons: leadPriority.reasons,
-      summary: `Lead vinculado a uma empresa ${data.descricao_situacao_cadastral?.toLowerCase()} do segmento ${segment}.`
+      summary: `Empresa ${data.descricao_situacao_cadastral?.toLowerCase()} no segmento ${segment}. Pode ser analisada com prioridade ${leadPriority.priority.toLowerCase()}.`
     }
   }
 }

@@ -66,13 +66,16 @@ letalk/
 
 ### Clone o repositório
 git clone https://github.com/DeniseGrassi/letalk---consulta-cnpj.git
+
 cd letalk---consulta-cnpj
 
 ###  Configure o back-end
 cd backend
+
 npm install
 
 Crie um arquivo .env dentro da pasta backend com base no .env.example:
+
 PORT=3333
 BRASIL_API_URL=https://brasilapi.com.br/api/cnpj/v1
 
@@ -83,11 +86,12 @@ O back-end ficará disponível em:
 http://localhost:3333
 
 ### Configure o front-end
-Em outro terminal:
 cd frontend
+
 npm install
 
 Crie um arquivo .env dentro da pasta frontend com base no .env.example:
+
 VITE_API_URL=http://localhost:3333
 
 Rode o front-end:
@@ -98,6 +102,7 @@ http://localhost:5173
 
 ## Endpoints da API
 Health check
+
 GET /api/health
 
 Exemplo de resposta:
@@ -111,9 +116,9 @@ Exemplo de resposta:
 POST /api/leads/enrich
 Exemplo de body:
 {
-  "name": "Denise Grassi",
-  "email": "denise@email.com",
-  "phone": "71999999999",
+  "name": "Nome completo",
+  "email": "contato@email.com",
+  "phone": "00999999999",
   "cnpj": "00000000000191"
 }
 
