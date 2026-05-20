@@ -77,12 +77,14 @@ npm install
 Crie um arquivo .env dentro da pasta backend com base no .env.example:
 
 PORT=3333
+
 BRASIL_API_URL=https://brasilapi.com.br/api/cnpj/v1
 
 ### Rode o back-end:
 npm run dev
 
 O back-end ficará disponível em:
+
 http://localhost:3333
 
 ### Configure o front-end
@@ -95,9 +97,11 @@ Crie um arquivo .env dentro da pasta frontend com base no .env.example:
 VITE_API_URL=http://localhost:3333
 
 Rode o front-end:
+
 npm run dev
 
 O front-end ficará disponível em:
+
 http://localhost:5173
 
 ## Endpoints da API
@@ -114,45 +118,16 @@ Exemplo de resposta:
 
 ## Consultar empresa por CNPJ
 POST /api/leads/enrich
+
 Exemplo de body:
 {
   "name": "Nome completo",
   "email": "contato@email.com",
   "phone": "00999999999",
-  "cnpj": "00000000000191"
+  "cnpj": "000.000.000-00"
 }
 
-Exemplo de resposta:
-{
-  "lead": {
-    "name": "Denise Grassi",
-    "email": "denise@email.com",
-    "phone": "71999999999",
-    "cnpj": "00000000000191"
-  },
-  "company": {
-    "cnpj": "00000000000191",
-    "corporateName": "BANCO DO BRASIL SA",
-    "tradeName": "DIRECAO GERAL",
-    "status": "ATIVA",
-    "companySize": "DEMAIS",
-    "estimatedEmployees": "Não informado",
-    "openingDate": "1966-08-01",
-    "mainActivity": "Bancos múltiplos, com carteira comercial",
-    "cnae": 6422100,
-    "segment": "Financeiro",
-    "city": "BRASILIA",
-    "state": "DF"
-  },
-  "analysis": {
-    "priority": "Alta",
-    "reasons": [
-      "Empresa ativa",
-      "Segmento com alto volume de relacionamento com clientes, mas que pode exigir abordagem mais consultiva"
-    ],
-    "summary": "Lead vinculado a uma empresa ativa do segmento Financeiro."
-  }
-}
+A resposta completa inclui dados como CNPJ, porte, data de abertura, CNAE e estimativa de funcionários.
 
 ### Decisões de projeto
 
@@ -170,13 +145,8 @@ A BrasilAPI não retorna a quantidade real de funcionários da empresa. Por isso
 Quando o porte não permite uma inferência segura, o sistema retorna “Não informado”.
 
 ### Tratamento de erros
-A aplicação trata os seguintes cenários:
-
-campos obrigatórios não preenchidos;
-CNPJ inválido;
-falha na consulta à API externa;
-erro inesperado no servidor.
+A aplicação trata os seguintes cenários: campos obrigatórios não preenchidos; CNPJ inválido; falha na consulta à API externa e erro inesperado no servidor.
 
 ### Uso de IA
-Utilizei IA como apoio pontual durante o desenvolvimento, principalmente para organizar ideias, revisar estrutura do projeto, validar decisões técnicas e melhorar a documentação. A implementação, os testes locais, os ajustes de código e as decisões finais foram feitos por mim, considerando o escopo do desafio e o nível esperado para uma vaga júnior.
+Utilizei IA como apoio pontual durante o desenvolvimento, principalmente para organizar ideias, revisar estrutura do projeto, validar decisões técnicas e melhorar a documentação. A implementação, os testes locais, os ajustes de código e as decisões finais foram feitos por mim, considerando o escopo do desafio proposto.
 
