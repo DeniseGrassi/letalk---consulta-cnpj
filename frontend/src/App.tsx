@@ -38,8 +38,9 @@ function App() {
           <span className="eyebrow">Letalk</span>
           <h1>Consulta de empresas por CNPJ</h1>
           <p>
-            Consulte um CNPJ, visualize os principais dados da empresa e veja uma
-            análise simples para apoiar a priorização comercial.
+            <p>
+              Consulte os principais dados da empresa e apoie a análise do lead.
+            </p>
           </p>
         </div>
       </section>
@@ -48,8 +49,9 @@ function App() {
         <div className="form-panel">
           <h2>Dados do contato</h2>
           <p>
-            Preencha os dados básicos do contato para consultar as informações da
-            empresa vinculada ao CNPJ.
+            <p>
+              Preencha os dados do contato e informe o CNPJ da empresa.
+            </p>
           </p>
 
           <LeadForm onSubmit={handleEnrichLead} isLoading={isLoading} />
@@ -62,8 +64,9 @@ function App() {
             <div className="empty-state">
               <h2>Nenhuma empresa consultada</h2>
               <p>
-                Após a consulta, os dados principais da empresa aparecerão aqui de forma
-                organizada.
+                <p>
+                  Faça uma consulta para visualizar os principais dados da empresa.
+                </p>
               </p>
             </div>
           )}
