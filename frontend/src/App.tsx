@@ -39,7 +39,7 @@ function App() {
           <h1>Consulta de empresas por CNPJ</h1>
           <p>
             <p>
-              Consulte os principais dados da empresa e apoie a análise do lead.
+              Consulte os principais dados da empresa para apoiar a análise do lead.
             </p>
           </p>
         </div>

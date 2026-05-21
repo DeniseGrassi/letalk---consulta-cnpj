@@ -150,3 +150,37 @@ A aplicação trata os seguintes cenários: campos obrigatórios não preenchido
 ### Uso de IA
 Utilizei IA como apoio pontual durante o desenvolvimento, principalmente para organizar ideias, revisar estrutura do projeto, validar decisões técnicas e melhorar a documentação. A implementação, os testes locais, os ajustes de código e as decisões finais foram feitos por mim, considerando o escopo do desafio proposto.
 
+### Tempo gasto
+O tempo total gasto na execução do desafio foi de aproximadamente 24 horas, considerando planejamento, desenvolvimento do back-end, criação da interface, integração entre front-end e API, testes locais, deploy e documentação.
+
+
+### Se eu tivesse mais tempo
+
+Se tivesse mais tempo para evoluir o projeto, eu adicionaria:
+
+Autenticação de usuários;
+Histórico de consultas realizadas;
+Cache das consultas para evitar chamadas repetidas à API externa;
+Testes automatizados no front-end e no back-end;
+Melhorias no tratamento visual de erros;
+Paginação para um possível histórico de leads consultados;
+Integração com outras fontes externas para complementar os dados da empresa;
+Uma regra de priorização comercial mais completa, considerando segmento, porte, localização e outros critérios;
+
+Essas melhorias não foram implementadas nesta versão para manter o foco nos requisitos principais do desafio e entregar uma solução funcional, simples e objetiva.
+
+### Build do projeto
+#### Back-end
+cd backend
+npm run build
+npm start
+
+#### Front-end
+cd frontend
+npm run build
+npm run preview
+
+### Observação sobre deploy
+O back-end foi publicado no Render e o front-end foi publicado na Vercel. Em produção, o front-end consome a API do Render por meio da variável de ambiente `VITE_API_URL`.
+
+
