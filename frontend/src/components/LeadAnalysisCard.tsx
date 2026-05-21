@@ -17,7 +17,7 @@ export function LeadAnalysisCard({ analysis }: LeadAnalysisCardProps) {
             <p>{analysis.summary}</p>
 
             <div>
-                <strong>Motivos da classificação</strong>
+                <strong>Por que essa prioridade?</strong>
                 <ul>
                     {analysis.reasons.map((reason) => (
                         <li key={reason}>{reason}</li>

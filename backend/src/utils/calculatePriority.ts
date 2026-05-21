@@ -24,7 +24,7 @@ export function calculatePriority(status: string, segment: string): PriorityResu
 
   if (segment === 'Financeiro') {
     reasons.push(
-      'Segmento com alto volume de relacionamento com clientes, mas que pode exigir abordagem mais consultiva'
+      'Segmento com alto volume de relacionamento com clientes.'
     )
   }
 
